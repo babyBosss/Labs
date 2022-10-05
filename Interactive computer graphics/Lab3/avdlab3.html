@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <script type='text/javascript' src='https://www.x3dom.org/download/dev/x3dom-full.js'> </script>
+    <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css' />
+</head>
+<body style='width:100%; height:100%; border:0; margin:0; padding:0;'>
+    <X3D width="100vw" height="100vh">
+
+        <Scene>
+            <Viewpoint position="-2.83080 3.95833 18.20821" orientation="-0.99332 -0.11425 0.01627 0.16692" zNear="0"
+                zFar="150.00000" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="0.78540"
+                description="defaultX3DViewpointNode"></Viewpoint>
+
+            <NavigationInfo avatarSize='[ 0.25, 1.6, 0.75 ]' bind='false' explorationMode='all' headlight='false'
+                isActive='false' metadata='X3DMetadataObject' reverseScroll='false' speed='2.0' transitionTime='1.0'
+                transitionType='["LINEAR"]' type='[FLY]' typeParams='[-0.4,60,0.05,2.8]' visibilityLimit='0.0'>
+            </NavigationInfo>
+<collision>
+            <!-- /////////////// Гора //////////////// -->
+            <group DEF='mountstand'>
+                <!-- подставка -->
+                <transform translation='-15 0 0'>
+                    <shape DEF='pod'>
+                        <box size='3 0.5 2'>
+                        </box>
+                        <appearance>
+                            <imagetexture url='pod.jpg'></imagetexture>
+                        </appearance>
+                    </shape>
+                </transform>
+                <!-- надпись -->
+                <transform translation='-15 -0.15 1.02'>
+                    <shape>
+                        <appearance>
+                            <material diffusecolor='0.5 0.5 0.5'></material>
+                        </appearance>
+                        <Text string="Гора" solid="false">
+                            <FontStyle size="0.4" style="BOLD" justify='MIDDLE' family='SERIF'> </FontStyle>
+                        </Text>
+                    </shape>
+                </transform>
+                <!-- гора -->
+                <anchor url='https://www.adventureconsultants.com/expeditions/seven-summits/everest/' parameter="target='_self'">
+                    <transform translation='-16 0 -1' scale='0.6 0.7 0.6'>
+                        <shape>
+                            <ElevationGrid xDimension="4" zDimension="4"
+                                height="0.2 0.3 0.4 0.2 1.2 1.5 1 0.4 0.4 2.1 0.7 0.2 0.2 0.3 0.2 0.2" xSpacing="1"
+                                zSpacing="1" solid="false">
+                            </ElevationGrid>
+                            <!-- текстура -->
+                            <appearance>
+                                <imagetexture url='mount.jpg'>
+                                    <imagetexture>
+                            </appearance>
+                        </shape>
+                    </transform>
+                </anchor>
+            </group>
+
+            <!-- //////////////// Пирамида Гизы ///////////////// -->
+            <group DEF='pyramidstand'>
+                <!-- подставка -->
+                <transform translation='-10 0 0'>
+                    <shape USE='pod'>
+                    </shape>
+                </transform>
+                <!-- надпись -->
+                <transform translation='-10 -0.15 1.02'>
+                    <shape>
+                        <!-- цвет -->
+                        <appearance>
+                            <material diffusecolor='0.5 0.5 0.5'></material>
+                        </appearance>
+                        <!-- текст -->
+                        <Text string="Пирамида Гизы" solid="false">
+                            <FontStyle size="0.27" style="BOLD" justify='MIDDLE' family='SERIF'> </FontStyle>
+                        </Text>
+                    </shape>
+                </transform>
+                <!-- пирамида -->
+                <anchor url='https://www.civitatis.com/en/alexandria/excursion-cairo-giza-pyramids/' parameter="target='_self'">
+                    <transform translation='-9.5 0.25 0.7' rotation='0 1 0 2.3' scale='0.5 0.5 0.5'>
+                        <shape>
+                            <!-- фигура из треугольников -->
+                            <IndexedTriangleSet index="0 1 4 0 3 4 1 2 4 2 3 4" solid="false">
+                                <Coordinate point="0 0 0, 2 0 2, 4 0 0, 2 0 -2, 2 3 0">
+                                </Coordinate>
+                                <!-- цвет фигуры -->
+                                <ColorRGBA color=" 0.75 0.75 0.75 1, 0.75 0.75 0.75 1, 0.75 0.75 0.75 1,
+                                                0.75 0.75 0.75 1 , 0.75 0.75 0.75 1">
+                                </ColorRGBA>
+                            </IndexedTriangleSet>
+                            <!-- текстура -->
+                            <Appearance>
+                                <ImageTexture url="py.jpg"></ImageTexture>
+                                <texturetransform rotation='0.56'></texturetransform>
+                            </Appearance>
+                        </shape>
+                    </transform>
+                </anchor>
+            </group>
+            <!-- //////////////// Adobe ////////////////// -->
+            <group DEF='adobelogostand'>
+                <!-- подставка -->
+                <transform translation='-5 0 0'>
+                    <shape USE='pod'>
+                    </shape>
+                </transform>
+                <!-- надпись -->
+                <transform translation='-5 -0.15 1.02'>
+                    <shape>
+                        <appearance>
+                            <material diffusecolor='0.5 0.5 0.5'></material>
+                        </appearance>
+                        <Text string="Adobe" solid="false">
+                            <FontStyle size="0.4" style="BOLD" justify='MIDDLE' family='SERIF'> </FontStyle>
+                        </Text>
+                    </shape>
+                </transform>
+                <!-- значок -->
+                <anchor url='https://www.adobe.com/' parameter="target='_self'">
+                    <transform translation='-6 0.3 0' scale='0.3 0.3 0.3'>
+                        <shape>
+                            <appearance>
+
+                            </appearance>
+                            <!-- фигура из полигонов -->
+                            <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                                coordIndex="1 2 3 -1 4 5 6 -1 7 8 12 -1 11 12 9 10 -1"
+                                colorIndex="0 0 0 -1 0 0 0 -1 0 0 0 -1 0 0 0 0 -1">
+                                <Coordinate
+                                    point="10 10 10, 0 0 0, 0 6 0, 2 6 0, 4 6 0, 6 6 0, 6 0 0, 2 2 0, 3 4 0, 5 0 0, 4 0 0, 3 2 0, 4 2 0">
+                                </Coordinate>
+                                <!-- цвет -->
+                                <Color color="1 0 0"></Color>
+                            </IndexedFaceSet>
+                        </shape>
+                    </transform>
+                </anchor>
+            </group>
+            <!-- //////////// Adidas //////////////// -->
+
+            <group DEF='adidasstand'>
+                <!-- подставка -->
+                <transform>
+                    <shape USE='pod'>
+                    </shape>
+                </transform>
+                <!-- надпись -->
+                <transform translation='0 -0.15 1.02'>
+                    <shape>
+                        <appearance>
+                            <material diffusecolor='0.5 0.5 0.5'></material>
+                        </appearance>
+                        <Text string="Adidas" solid="false">
+                            <FontStyle size="0.5" style="BOLD" justify='MIDDLE' family='SERIF'> </FontStyle>
+                        </Text>
+                    </shape>
+                </transform>
+                <!-- логотип адидас из файла -->
+                <anchor url='https://www.adidas.com/us/kids' parameter="target='_self'">
+                    <transform translation='-1.4 0.4 0' scale='0.2 0.2 0.2'>
+                        <inline url='adidas.x3d'>
+                    </transform>
+                </anchor>
+            </group>
+
+            <!-- /////////// Mitsubishi ////////////////     -->
+            <group DEF='mitsustand'>
+                <!-- подставка -->
+                <transform translation='5 0 0'>
+                    <shape USE='pod'>
+                    </shape>
+                </transform>
+                <!-- надпись -->
+                <transform translation='5 -0.15 1.02'>
+                    <shape>
+                        <appearance>
+                            <material diffusecolor='0.5 0.5 0.5'></material>
+                        </appearance>
+                        <Text string="Mitsubishi" solid="false">
+                            <FontStyle size="0.4" style="BOLD" justify='MIDDLE' family='SERIF'> </FontStyle>
+                        </Text>
+                    </shape>
+                </transform>
+                <!-- логотип митсубиси -->
+                <anchor url='https://www.mitsubishi.com/en/' parameter="target='_self'">
+                    <transform scale='0.3 0.3 0.3' translation='4 0.3 0 '>
+                        <shape>
+                            <IndexedTriangleStripSet index='1 2 3 4 -1 4 5 7 6 -1 8 9 4 10 -1' solid='false'>
+                                <Coordinate
+                                    point='10 10 10, 0 0 0, 1 2 0, 2 0 0, 3 2 0, 5 2 0, 6 0 0, 4 0 0, 2 3.5 0, 3 5 0, 4 3.5 0'>
+                                </Coordinate>
+                                <ColorRGBA
+                                    color='1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1 , 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1'>
+                                </ColorRGBA>
+                            </IndexedTriangleStripSet>
+                        </shape>
+                    </transform>
+                </anchor>
+            </group>
+
+            <!-- //////////// London Tube ///////////// -->
+            <group DEF='ugstand'>
+                <!-- подставка -->
+                <transform translation='10 0 0'>
+                    <shape USE='pod'>
+                    </shape>
+                </transform>
+                <!-- надпись -->
+                <transform translation='10 -0.15 1.02'>
+                    <shape>
+                        <appearance>
+                            <material diffusecolor='0.5 0.5 0.5'></material>
+                        </appearance>
+                        <Text string="London tube" solid="false">
+                            <FontStyle size="0.3" style="BOLD" justify='MIDDLE' family='SERIF'> </FontStyle>
+                        </Text>
+                    </shape>
+                </transform>
+                <!-- фигура -->
+                <anchor url='https://tfl.gov.uk/' parameter="target='_self'">
+                    <!-- внешний цилиндр -->
+                    <transform translation='10 1.25 0' rotation='1 0 0 1.5708'>
+                        <shape>
+                            <appearance>
+                                <material diffuseColor='0.5 0.5 0.5'></material>
+                                <imagetexture url='red.png'></imagetexture>
+                            </appearance>
+                            <cylinder lit='true' radius='1' height='1'></cylinder>
+                        </shape>
+                    </transform>
+                    <!-- ввнутренний цилиндр -->
+                    <transform translation='10 1.25 0' rotation='1 0 0 1.5708'>
+                        <shape>
+                            <cylinder lit='true' radius='0.7' height='1.02'></cylinder>
+                        </shape>
+                    </transform>
+                    <!-- прямоугольник с надписью -->
+                    <transform translation='10 1.25 0'>
+                        <shape>
+                            <appearance>
+                                <imagetexture url='blue.jpg'></imagetexture>
+                            </appearance>
+                            <box size='2.4 0.5 1.2'>
+                                </cylinder>
+                        </shape>
+                    </transform>
+                    <transform translation='10 1.15 0.64'>
+                        <shape>
+                            <appearance>
+                                <material diffusecolor='1 1 1'></material>
+                            </appearance>
+                            <Text string="Underground" solid="false">
+                                <FontStyle size="0.37" style="BOLD" justify='MIDDLE' family='Johnston'> </FontStyle>
+                            </Text>
+                        </shape>
+                    </transform>
+                </anchor>
+            </group>
+
+            <!-- ///////// pointset /////////// -->
+            <transform>
+                <shape>
+                    <pointset>
+                        <color color='0 0 0, 0 0 0, 0 0 0, 0 0 0, 0 0 0, 0 0 0'></color>
+                        <coordinate point='0 4 0, -5 4 0, -10 4 0, -15 4 0, 5 4 0, 10 4 0'></coordinate>
+                    </pointset>
+                </shape>
+            </transform>
+
+</collision>
+
+<!-- СВЕТ \\\\\\\\\\\\\\\\\\\\ -->
+<Group DEF="Light">
+    <PointLight ambientIntensity='0' attenuation='1,0,0' color='1,1,1' 
+                global='true' intensity='1' location='2, 5, 5'
+                on='true' radius='30' shadowFilterSize='2' 
+                shadowIntensity='0.5' shadowMapSize='1024' 
+                shadowOffset='0' zFar='-1' zNear='-1' ></PointLight>
+  
+    <DirectionalLight ambientIntensity='0' color='1, 1, 1' direction='0.5, -1, -1' 
+                      global='true' intensity='0.5'  on='true' shadowCascades='1' shadowFilterSize='1' 
+                      shadowIntensity='0.7' shadowMapSize='2024'
+                      shadowOffset='0' shadowSplitFactor='1' 
+                      shadowSplitOffset='1'></DirectionalLight>
+  
+    <SpotLight ambientIntensity='0' attenuation='1,0,0' 
+                       beamWidth='1.5708' color='1, 1, 1' cutOffAngle='3.14' 
+                       direction='0, 0.5, -1' global='true' intensity='1'
+                       location='-2.5, 2, 10,' radius='100' shadowCascades='1' 
+                       shadowFilterSize='2' shadowIntensity='0.5' 
+                       shadowMapSize='1024'></SpotLight>   
+</Group>
+
+<transform translation='0 2 -4'>
+    <appearance>
+        <material diffusecolor='0.5 0.5 0.5'></material>
+    </appearance>
+    <shape>
+        <box size='50, 10, 0.5'></box>
+    </shape>
+</transform>
+        </Scene>
+    </X3D>
+</body>
+</html>
